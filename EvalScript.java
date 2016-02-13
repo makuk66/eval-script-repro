@@ -16,6 +16,8 @@ public class EvalScript {
 		ScriptEngineManager factory = new ScriptEngineManager();
 		ScriptEngine engine = factory.getEngineByName("nashorn");
 		ScriptContext scriptContext = new SimpleScriptContext();
+                // From https://wiki.openjdk.java.net/display/Nashorn/Nashorn+jsr223+engine+notes this seems to fix it:
+                // scriptContext.setBindings(engine.getContext().getBindings(ScriptContext.ENGINE_SCOPE), ScriptContext.ENGINE_SCOPE);
 		MyLogger mylogger = new MyLogger();
 		scriptContext.setAttribute("logger", mylogger, ScriptContext.ENGINE_SCOPE);
 		String script = "function (msg) { logger.info('we were called with msg ' + msg); }";
