@@ -1,10 +1,11 @@
 This code shows a change between 1.8.0_71 and 1.8.0_72:
-
+```
 $ ./run.sh 
 java version "1.8.0_71"
 Java(TM) SE Runtime Environment (build 1.8.0_71-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 25.71-b15, mixed mode)
 MYLOG we were called with msg msg1
+
 java version "1.8.0_72"
 Java(TM) SE Runtime Environment (build 1.8.0_72-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 25.72-b15, mixed mode)
@@ -30,3 +31,4 @@ Caused by: <eval>:1 ReferenceError: "logger" is not defined
 	at jdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:199)
 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:383)
 	... 3 more
+```
