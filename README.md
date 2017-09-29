@@ -34,3 +34,15 @@ Caused by: <eval>:1 ReferenceError: "logger" is not defined
 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:383)
 	... 3 more
 ```
+
+Update 20170929: 
+
+```
+$ java -version
+java version "1.8.0_144"
+Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
+Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+
+$ javac EvalScript.java && java EvalScript
+MYLOG we were called with msg msg1
+```
